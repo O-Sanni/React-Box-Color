@@ -13,7 +13,7 @@ class App extends React.Component{
     }
   }
 
-  colorChange=()=>
+  colorChange=()=> //function to to return random colors
   {
     const colors=["purple","red","green","darkorchid", "aqua","cyan","darkkhaki", "gold", "yellow","chartreuse","burlywood","aliceblue", "orange","blue","brown","antiquewhite","aquamarine","coral","darkviolet"];
     let color=colors[Math.floor(Math.random()*colors.length)];
@@ -22,15 +22,12 @@ class App extends React.Component{
 
   onChange=()=>
   {  
-    let randomColor=this.colorChange();
-    let randomTextColor=this.colorChange();
-    let randomBorderColor=this.colorChange();
     this.setState(
     {
-      color: randomColor,
-      colorText:randomTextColor,
-      borderColor: randomBorderColor,
-      clickCounter: (this.state.clickCounter+1)
+      color: this.colorChange(), //call colorChange() function to get random color
+      colorText:this.colorChange(),
+      borderColor: this.colorChange(),
+      clickCounter: (this.state.clickCounter+1) //increase counter by 1 for each click
     })
     console.log("click counter ===>",this.state.clickCounter)
   }
