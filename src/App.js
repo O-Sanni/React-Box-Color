@@ -4,25 +4,29 @@ import './App.css';
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state={
+    this.state=
+    {
       color: "coral",
       colorText: "purple",
       borderColor: "red",
       clickCounter: 0
     }
   }
-  colorChange=()=>{
+
+  colorChange=()=>
+  {
     const colors=["purple","red","green","darkorchid", "aqua","cyan","darkkhaki", "gold", "yellow","chartreuse","burlywood","aliceblue", "orange","blue","brown","antiquewhite","aquamarine","coral","darkviolet"];
     let color=colors[Math.floor(Math.random()*colors.length)];
-   return color;
+    return color;
   }
 
-  onChange=()=>{
-    
+  onChange=()=>
+  {  
     let randomColor=this.colorChange();
     let randomTextColor=this.colorChange();
     let randomBorderColor=this.colorChange();
-    this.setState({
+    this.setState(
+    {
       color: randomColor,
       colorText:randomTextColor,
       borderColor: randomBorderColor,
@@ -30,16 +34,17 @@ class App extends React.Component{
     })
     console.log("click counter ===>",this.state.clickCounter)
   }
-  render(){
-    return (
+
+  render()
+  {
+    return(
       <div className="App">
       <h1>Box color change</h1>
       <div className="colorBox"
       style={{backgroundColor:
       this.state.color, borderColor: this.state.borderColor}}
       onClick={this.onChange}>
-        <p style={{color:this.state.colorText}}>Click Me
-        </p>
+        <p style={{color:this.state.colorText}}>Click Me</p>
       </div>
       </div>
     )
