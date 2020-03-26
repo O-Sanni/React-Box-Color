@@ -7,6 +7,7 @@ class App extends React.Component{
     this.state={
       color: "coral",
       colorText: "purple",
+      borderColor: "red",
       clickCounter: 0
     }
   }
@@ -24,7 +25,7 @@ class App extends React.Component{
     this.setState({
       color: randomColor,
       colorText:randomTextColor,
-      borderColor:
+      borderColor: randomBorderColor,
       clickCounter: (this.state.clickCounter+1)
     })
     console.log("click counter ===>",this.state.clickCounter)
@@ -35,7 +36,7 @@ class App extends React.Component{
       <h1>Box color change</h1>
       <div className="colorBox"
       style={{backgroundColor:
-      this.state.color}}
+      this.state.color, borderColor: this.state.borderColor}}
       onClick={this.onChange}>
         <p style={{color:this.state.colorText}}>Click Me
         </p>
