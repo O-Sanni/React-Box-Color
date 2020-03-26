@@ -10,13 +10,21 @@ class App extends React.Component{
       clickCounter: 0
     }
   }
+  colorChange=()=>{
+    const colors=["purple","red","green","darkorchid", "aqua","cyan","darkkhaki", "gold", "yellow","chartreuse","burlywood","aliceblue", "orange","blue","brown","antiquewhite","aquamarine","coral","darkviolet"];
+    let color=colors[Math.floor(Math.random()*colors.length)];
+   return color;
+  }
+
   onChange=()=>{
-   const colors=["purple","red","green","darkorchid", "aqua","cyan","darkkhaki", "gold", "yellow","chartreuse","burlywood","aliceblue", "orange","blue","brown","antiquewhite","aquamarine","coral","darkviolet"];
-    let randomColor=colors[Math.floor(Math.random()*colors.length)];
-    let randomTextColor=colors[Math.floor(Math.random()*colors.length)];
+    
+    let randomColor=this.colorChange();
+    let randomTextColor=this.colorChange();
+    let randomBorderColor=this.colorChange();
     this.setState({
       color: randomColor,
       colorText:randomTextColor,
+      borderColor:
       clickCounter: (this.state.clickCounter+1)
     })
     console.log("click counter ===>",this.state.clickCounter)
