@@ -1,6 +1,7 @@
 .App{
   margin-left: 500px;
 }
+
 .colorBox{
   width: 500px;
   height: 500px;
@@ -8,14 +9,15 @@
   border-radius: 15%;
   border-style: outset;
   border-width: 5px;
-
 }
+
 h1{
   font-family: 'Gloria Hallelujah', cursive;
   width: 500px;
   font-size: 45px;
   color: rgb(9, 104, 72);
 }
+
 p{
   font-family: 'Gloria Hallelujah', cursive;
   padding-top: 150px;
