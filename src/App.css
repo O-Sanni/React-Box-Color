@@ -4,7 +4,7 @@
 .colorBox{
   width: 500px;
   height: 500px;
-  transition: 0.5s;
+  transition: 2s ease-out;
 
 }
 h1{
@@ -18,4 +18,5 @@ p{
   padding-top: 150px;
   padding-left: 75px;
   font-size: 45px;
+  transition: 2s ease-out;
 }
